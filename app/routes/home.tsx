@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/home";
 import { ProjectCard } from "~/components/project-card";
-import { experience, projects, siteIdentity } from "~/data/site";
+import { experience, projects, siteConfig } from "~/data/site";
 import { getArticles } from "~/lib/content.server";
 
 export function meta() {
   return [
-    { title: `${siteIdentity.name} — AI Independent Builder` },
-    { name: "description", content: "Liangshanbobo 的 AI 产品、开源实验、文章与一人公司探索。" },
+    { title: `${siteConfig.name} — ${siteConfig.role}` },
+    { name: "description", content: siteConfig.description },
   ];
 }
 
@@ -20,39 +20,37 @@ export default function Home({ loaderData }: Route.ComponentProps) {
     <main id="main-content">
       <section className="hero section-frame">
         <div className="hero-copy">
-          <div className="availability"><span /> AVAILABLE FOR IDEAS</div>
-          <p className="eyebrow">AI INDEPENDENT BUILDER / LIANGSHANBOBO</p>
-          <h1>构建值得信任的系统，<br /><span>也把值得长期保存的故事，留在其中。</span></h1>
-          <p className="hero-lede">我关注 Agent、RAG、知识工程与完整产品交付，把模糊想法变成可理解、可验证、可持续迭代的真实产品。</p>
+          <div className="availability"><span /> {siteConfig.home.availability}</div>
+          <p className="eyebrow">{siteConfig.home.eyebrow}</p>
+          <h1>{siteConfig.home.headline}<br /><span>{siteConfig.home.headlineAccent}</span></h1>
+          <p className="hero-lede">{siteConfig.home.intro}</p>
           <div className="hero-actions">
             <Link className="button button-primary" to="/projects" reloadDocument>查看作品 <span>↗</span></Link>
             <Link className="button button-secondary" to="/articles" reloadDocument>阅读文章</Link>
           </div>
           <div className="hero-proof">
-            <span><strong>03+</strong> 核心项目</span>
-            <span><strong>FULL</strong> 产品闭环</span>
-            <span><strong>OPEN</strong> 持续记录</span>
+            {siteConfig.home.proof.map((item) => <span key={item.label}><strong>{item.value}</strong> {item.label}</span>)}
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="抽象双节点与蝶翼轨迹">
+        <div className="hero-visual" aria-label="抽象智能节点网络">
           <div className="visual-grid" />
           <div className="orbit orbit-one"><i /></div>
           <div className="orbit orbit-two"><i /></div>
           <div className="core-orb">
             <span className="core-label">BUILDING</span>
-            <strong>SYSTEMS × STORIES</strong>
-            <small>Build with care</small>
+            <strong>AI × PRODUCT</strong>
+            <small>Human-centered systems</small>
           </div>
-          <div className="visual-note note-top">TRACE / LSB-01</div>
-          <div className="visual-note note-bottom">TWIN SIGNALS · ONLINE</div>
+          <div className="visual-note note-top">TRACE / 0027</div>
+          <div className="visual-note note-bottom">STATUS · ONLINE</div>
         </div>
       </section>
 
       <section className="now-strip section-frame" aria-label="当前状态">
-        <div><span className="pulse" /> {siteIdentity.wordmark}</div>
-        <p>正在构建可验证的产品，也为重要的时刻留出位置。</p>
-        <span className="mono">SHANGHAI · UTC+8</span>
+        <div><span className="pulse" /> {siteConfig.name}</div>
+        <p>{siteConfig.home.now}</p>
+        <span className="mono">{siteConfig.home.location}</span>
       </section>
 
       <section className="section section-frame">
@@ -103,7 +101,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       <section className="contact-cta section-frame">
         <p className="eyebrow">LET'S BUILD SOMETHING MEANINGFUL</p>
         <h2>有值得一起做的事情？<br /><span>我们聊聊。</span></h2>
-        <a className="button button-primary" href={siteIdentity.githubUrl} target="_blank" rel="noreferrer">在 GitHub 找我 <span>↗</span></a>
+        <a className="button button-primary" href={`mailto:${siteConfig.email}`}>发一封邮件 <span>↗</span></a>
       </section>
     </main>
   );
