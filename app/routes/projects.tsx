@@ -1,8 +1,8 @@
 import { ProjectCard } from "~/components/project-card";
-import { projects } from "~/data/site";
+import { projects, siteIdentity } from "~/data/site";
 
 export function meta() {
-  return [{ title: "作品 — YOUR.NAME" }, { name: "description", content: "AI、知识工程与产品交付项目案例。" }];
+  return [{ title: `作品 — ${siteIdentity.name}` }, { name: "description", content: "AI、知识工程与产品交付项目案例。" }];
 }
 
 export default function Projects() {

@@ -1,9 +1,9 @@
-# Personal AI Portfolio
+# Liangshanbobo
 
-> 面向 AI 独立开发者与一人公司的开源个人网站系统：用一个站点承载作品、文章、实验和长期个人品牌。
+> Liangshanbobo 的开源个人网站与公开构建基地：承载作品、文章、实验和一人公司的长期品牌。
 
 <p align="center">
-  <img src="./docs/preview.png" alt="Personal AI Portfolio 首页预览" width="100%" />
+  <img src="./docs/preview.png" alt="Liangshanbobo 首页预览" width="100%" />
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
   <a href="CONTRIBUTING.md">参与贡献</a>
 </p>
 
-**项目状态：** 开源模板可本地运行和构建；正式在线演示待域名、ICP备案与国内部署链路完成后开放。本仓库不会用本地预览冒充线上 Demo。
+**项目状态：** 开源网站可本地运行和构建；正式在线演示待域名、ICP备案与国内部署链路完成后开放。本仓库不会用本地预览冒充线上 Demo。
 
 项目使用 React、Vite、TypeScript 与 React Router Framework Mode。内容页面会在构建阶段预渲染为独立 HTML，适合部署到腾讯云 COS、CloudBase、CDN 或其他静态托管平台。
 
@@ -80,11 +80,10 @@ featured: false
 
 ## 个性化清单
 
-正式发布前需要替换：
+Fork 为你自己的站点时需要替换：
 
-- `YOUR.NAME`
-- `hello@example.com`
-- GitHub 地址
+- `app/data/site.ts` 中的品牌名称与 GitHub 地址
+- 对外联系入口
 - 首页个人定位和项目数据
 - 关于页照片与真实经历
 - 域名确定后的 canonical、Open Graph、Sitemap 和 RSS 地址
@@ -94,14 +93,14 @@ featured: false
 推荐使用两个边界清晰的仓库：
 
 ```text
-personal-ai-portfolio（公开）  →  组件、主题、博客引擎、示例内容
-my-personal-site（私有）       →  真实资料、未发布内容、部署配置
+liangshanbobo（公开）          →  个人品牌、组件、主题、博客引擎、示例内容
+liangshanbobo-private（私有）  →  未发布内容、私密资料、部署配置
 ```
 
 在私人网站仓库中添加本项目作为上游：
 
 ```bash
-git remote add upstream https://github.com/liang0417/personal-ai-portfolio.git
+git remote add upstream https://github.com/liang0417/liangshanbobo.git
 git fetch upstream
 git merge upstream/main
 ```

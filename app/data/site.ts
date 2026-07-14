@@ -1,3 +1,12 @@
+export const siteIdentity = {
+  name: "Liangshanbobo",
+  wordmark: "LIANGSHANBOBO",
+  mark: "LSB",
+  githubHandle: "liang0417",
+  githubUrl: "https://github.com/liang0417",
+  repositoryUrl: "https://github.com/liang0417/liangshanbobo",
+} as const;
+
 export const navigation = [
   { label: "首页", href: "/" },
   { label: "文章", href: "/articles" },
@@ -7,11 +16,11 @@ export const navigation = [
 
 export const projects = [
   {
-    name: "AI Proposal Studio",
-    description: "把检索、推理、文档生成与可追溯证据编排成一条可交付的业务工作流。",
-    impact: "从想法到可审阅方案",
-    stack: ["React", "FastAPI", "RAG", "Agent"],
-    status: "持续迭代",
+    name: "Shanbo Context",
+    description: "本地优先、答案可验证的个人知识工作台，并为团队级 RAG 与 Agent 工作流保留清晰演进路径。",
+    impact: "Private context. Verifiable answers.",
+    stack: ["React", "FastAPI", "RAG", "Local-first"],
+    status: "开放构建",
     featured: true,
   },
   {
@@ -35,17 +44,17 @@ export const projects = [
 export const experience = [
   {
     period: "NOW",
-    role: "AI Product Engineer",
-    summary: "关注 Agent、RAG、知识工程与可靠交付，让 AI 能力真正进入业务流程。",
+    role: "Independent AI Builder",
+    summary: "用 Agent、RAG 与自动化构建可验证、可持续迭代的真实产品。",
   },
   {
-    period: "2024—2025",
-    role: "Full-stack Builder",
-    summary: "从需求、交互、前后端实现到部署验证，持续构建完整产品闭环。",
+    period: "BUILDING",
+    role: "One-Person Company Explorer",
+    summary: "探索一个人借助 AI、开源与系统化工作流可以走多远。",
   },
   {
-    period: "EARLIER",
-    role: "Backend Engineer",
-    summary: "打下服务端、数据建模、系统集成和工程质量的技术基础。",
+    period: "FOUNDATION",
+    role: "Systems Builder",
+    summary: "把服务端、数据、产品与交付经验沉淀为可复用的构建能力。",
   },
 ];

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 - 2026-07-14
+
+- 将公开个人品牌统一为 Liangshanbobo，更新站点标题、署名、Header、favicon、About 身份卡与 GitHub 链接。
+- 将 GitHub Pages 基础路径和仓库标识迁移为 `liangshanbobo`。
+- 将旗舰项目统一为 Shanbo Context，并更新首页预览与 OpenSpec 品牌迁移记录。
+
 ## 0.3.1 - 2026-07-14
 
 - 修复 GitHub Pages 静态托管中站内导航触发数据路由请求并落入 404 的问题。

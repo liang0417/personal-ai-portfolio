@@ -1,7 +1,7 @@
-import { experience } from "~/data/site";
+import { experience, siteIdentity } from "~/data/site";
 
 export function meta() {
-  return [{ title: "关于 — YOUR.NAME" }, { name: "description", content: "AI Product Engineer 的经历、能力与工作方式。" }];
+  return [{ title: `关于 — ${siteIdentity.name}` }, { name: "description", content: "Liangshanbobo 的构建方向、能力与工作方式。" }];
 }
 
 export default function About() {
@@ -12,15 +12,15 @@ export default function About() {
           <p className="eyebrow">ABOUT / THE HUMAN IN THE LOOP</p>
           <h1>在技术、产品与真实问题之间，<span>持续搭桥。</span></h1>
         </div>
-        <div className="portrait-placeholder" aria-label="个人照片占位区域">
-          <span>PORTRAIT</span><small>你的照片将在这里</small>
+        <div className="portrait-placeholder" aria-label="Liangshanbobo identity signal">
+          <span>{siteIdentity.wordmark}</span><small>NO PORTRAIT · SIGNAL ONLY</small>
         </div>
       </header>
       <div className="about-grid">
         <section className="about-copy">
           <h2>我在做什么</h2>
-          <p>我是一名关注 AI 产品和工程落地的开发者。喜欢从复杂问题中找到清晰结构，也愿意深入到代码、数据和部署细节，把方案真正交付出去。</p>
-          <p>这个网站会持续记录项目案例、技术判断、失败复盘和正在进行的实验。相比展示一串技术名词，我更希望它能说明我如何理解问题和完成工作。</p>
+          <p>我是 {siteIdentity.name}，一名 AI 独立开发者与一人公司探索者。我把 Agent、RAG、自动化和产品工程当作杠杆，把模糊想法做成可以运行、验证并持续迭代的系统。</p>
+          <p>这里不是传统简历的线上复刻，而是一条公开构建轨迹：项目、技术判断、失败复盘、开源工具，以及正在发生的实验。</p>
           <div className="skill-cloud">
             {["AI Agent", "RAG", "React", "TypeScript", "Python", "System Design", "Product Thinking"].map((skill) => <span key={skill}>{skill}</span>)}
           </div>

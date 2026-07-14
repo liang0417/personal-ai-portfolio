@@ -1,13 +1,13 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/home";
 import { ProjectCard } from "~/components/project-card";
-import { experience, projects } from "~/data/site";
+import { experience, projects, siteIdentity } from "~/data/site";
 import { getArticles } from "~/lib/content.server";
 
 export function meta() {
   return [
-    { title: "YOUR.NAME — AI Product Engineer" },
-    { name: "description", content: "关于 AI、工程与长期创造的个人网站。" },
+    { title: `${siteIdentity.name} — AI Independent Builder` },
+    { name: "description", content: "Liangshanbobo 的 AI 产品、开源实验、文章与一人公司探索。" },
   ];
 }
 
@@ -21,7 +21,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       <section className="hero section-frame">
         <div className="hero-copy">
           <div className="availability"><span /> AVAILABLE FOR IDEAS</div>
-          <p className="eyebrow">AI PRODUCT ENGINEER / INDEPENDENT BUILDER</p>
+          <p className="eyebrow">AI INDEPENDENT BUILDER / ONE-PERSON COMPANY</p>
           <h1>构建 AI 产品，<br /><span>也构建值得信任的系统。</span></h1>
           <p className="hero-lede">我关注 Agent、RAG、知识工程与完整产品交付，把模糊想法变成可理解、可验证、可持续迭代的真实产品。</p>
           <div className="hero-actions">
@@ -50,8 +50,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       </section>
 
       <section className="now-strip section-frame" aria-label="当前状态">
-        <div><span className="pulse" /> NOW</div>
-        <p>正在构建一个更可靠、更透明的 AI 工作流</p>
+        <div><span className="pulse" /> {siteIdentity.wordmark}</div>
+        <p>正在构建 AI 产品、开放实验与一人公司的长期系统</p>
         <span className="mono">SHANGHAI · UTC+8</span>
       </section>
 
@@ -87,7 +87,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
 
       <section className="section section-frame experience-section">
         <div className="section-heading">
-          <div><p className="eyebrow">JOURNEY / 03</p><h2>经历与方向</h2></div>
+          <div><p className="eyebrow">BUILDER JOURNEY / 03</p><h2>构建轨迹</h2></div>
         </div>
         <div className="experience-grid">
           {experience.map((item) => (
@@ -103,7 +103,7 @@ export default function Home({ loaderData }: Route.ComponentProps) {
       <section className="contact-cta section-frame">
         <p className="eyebrow">LET'S BUILD SOMETHING MEANINGFUL</p>
         <h2>有值得一起做的事情？<br /><span>我们聊聊。</span></h2>
-        <a className="button button-primary" href="mailto:hello@example.com">发一封邮件 <span>↗</span></a>
+        <a className="button button-primary" href={siteIdentity.githubUrl} target="_blank" rel="noreferrer">在 GitHub 找我 <span>↗</span></a>
       </section>
     </main>
   );

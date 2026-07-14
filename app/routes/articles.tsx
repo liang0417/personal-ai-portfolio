@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import type { Route } from "./+types/articles";
+import { siteIdentity } from "~/data/site";
 import { getArticles } from "~/lib/content.server";
 
 export function meta() {
-  return [{ title: "文章 — YOUR.NAME" }, { name: "description", content: "关于 AI 工程、产品、知识系统与长期创造的文章。" }];
+  return [{ title: `文章 — ${siteIdentity.name}` }, { name: "description", content: "关于 AI 工程、产品、知识系统与长期创造的文章。" }];
 }
 
 export function loader() {

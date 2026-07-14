@@ -96,7 +96,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 .brand { display: inline-flex; align-items: center; gap: 0.7rem; font-size: 0.77rem; letter-spacing: 0.12em; font-weight: 700; }
-.brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line-bright); color: var(--accent); clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%); }
+.brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line-bright); color: var(--accent); clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%); font-size: 0.55rem; letter-spacing: 0.04em; }
 .desktop-nav { display: flex; gap: 1.8rem; font-size: 0.88rem; color: var(--text-soft); }
 .desktop-nav a { position: relative; padding: 0.75rem 0; transition: color 180ms ease; }
 .desktop-nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0.35rem; height: 1px; background: var(--accent); transition: right 180ms ease; }
