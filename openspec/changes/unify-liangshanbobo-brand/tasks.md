@@ -25,6 +25,6 @@
 ## 5. Publication
 
 - [x] 5.1 Run builds, tests, UTF-8 checks, and redaction scans.
-- [ ] 5.2 Rename the website and flagship GitHub repositories.
-- [ ] 5.3 Push each sanitized commit and verify remote SHA parity.
-- [ ] 5.4 Update and verify the GitHub profile website URL.
+- [x] 5.2 Rename the website and flagship GitHub repositories.
+- [x] 5.3 Push each sanitized commit and verify remote SHA parity.
+- [x] 5.4 Update and verify the GitHub profile website URL.
